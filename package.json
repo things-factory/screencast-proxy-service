@@ -1,0 +1,29 @@
+{
+  "name": "@things-factory/screencast-proxy-service",
+  "version": "1.0.0",
+  "main": "dist-server/index.js",
+  "browser": "client/index.js",
+  "things-factory": true,
+  "license": "MIT",
+  "author": "lotstar87",
+  "scripts": {
+    "serve": "things-factory",
+    "serve:dev": "npm run build:server && things-factory-dev",
+    "start:app": "things-factory-app",
+    "start:app:android": "things-factory-app --platform=android",
+    "emulate:app": "things-factory-app --emulate",
+    "emulate:app:android": "things-factory-app --emulate --platform=android",
+    "build:app:android": "things-factory-app --platform=android --mode=build",
+    "build": "npm run build:server",
+    "build:server": "npm run clean:server && tsc",
+    "clean:server": "rm -rf dist-server",
+    "clean": "npm run clean:server",
+    "prepublish": "npm run build:server"
+  },
+  "dependencies": {
+    "@things-factory/shell": "*",
+    "bonjour": "^3.5.0",
+    "node-fetch": "^2.6.0"
+  },
+  "devDependencies": {}
+}
