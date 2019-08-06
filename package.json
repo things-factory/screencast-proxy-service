@@ -22,7 +22,7 @@
   },
   "dependencies": {
     "@things-factory/shell": "*",
-    "bonjour": "^3.5.0",
+    "mdns": "^2.5.1",
     "node-fetch": "^2.6.0"
   },
   "devDependencies": {}

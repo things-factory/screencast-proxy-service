@@ -21,7 +21,7 @@ process.on('bootstrap-module-route' as any, (app, routes) => {
     var services = (global as any).screencastServices
     var service = services.find(s => s.name == serviceName)
 
-    var targetIP = service.txt['ip-address']
+    var targetIP = service.txtRecord['ip-address']
     var reqBody = {
       url,
       access_token: context.cookies.get('access_token')
