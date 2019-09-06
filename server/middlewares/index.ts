@@ -1,7 +1,7 @@
 var mdns = require('mdns')
 var browser
 var services = {}
-process.on('bootstrap-module-middleware' as any, app => {
+process.on('bootstrap-module-middleware' as any, async app => {
   /* app에 middleware를 추가할 수 있다. */
   browser = mdns.createBrowser(mdns.tcp('thingsfactory'))
 
