@@ -2,7 +2,7 @@ const fetch = require('node-fetch')
 
 import { screencastServices } from './controllers/screencast-services'
 process.on('bootstrap-module-history-fallback' as any, (app, fallbackOption) => {
-  fallbackOption.whiteList.push('/screencast-services', '/screencast')
+  fallbackOption.whiteList.push(`^\/(${['screencast-services', 'screencast'].join('|')})($|[/?#])`)
 })
 
 process.on('bootstrap-module-route' as any, (app, routes) => {
