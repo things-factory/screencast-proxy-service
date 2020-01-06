@@ -1,6 +1,6 @@
 {
   "name": "@things-factory/screencast-proxy-service",
-  "version": "1.0.3",
+  "version": "1.1.0-alpha.2",
   "main": "dist-server/index.js",
   "browser": "client/index.js",
   "things-factory": true,
@@ -21,7 +21,7 @@
     "prepublish": "npm run build:server"
   },
   "dependencies": {
-    "@things-factory/shell": "^0.9.1",
+    "@things-factory/shell": "^1.0.0-alpha.1",
     "mdns": "^2.5.1",
     "node-fetch": "^2.6.0"
   },
